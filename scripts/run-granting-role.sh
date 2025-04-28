@@ -6,6 +6,8 @@ set -o pipefail
 echo "Running granting role script"
 echo "$@"
 echo "-"
+echo $@
+echo "-"
 echo $GO_TRIGGER_USER
 echo "-"
 echo ${GO_TRIGGER_USER}
