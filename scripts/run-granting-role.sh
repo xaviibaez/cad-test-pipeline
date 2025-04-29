@@ -14,10 +14,12 @@ ls
 
 echo "Im here 3: "
 cd ..
+pwd
 ls
 
 echo "Im here 4: "
 cd ..
+pwd
 ls
 
 echo "Im here 5: "
