@@ -11,9 +11,6 @@ echo "Im here 2: "
 pwd
 ls
 
-echo "Finding cruise-config.xml: "
-find / -name "cruise-config.xml"
-
 echo "Printing cruise-config.xml: "
 cat /shared_data/cruise-config.xml
 
