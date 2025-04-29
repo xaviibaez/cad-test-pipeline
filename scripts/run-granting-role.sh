@@ -28,7 +28,7 @@ ls
 echo "Finding cruise-config.xml: "
 find / -name "cruise-config.xml" 2>/dev/null
 
-cat config/cruise-config.xml
+cat ./shared_data/cruise-config.xml
 
 sed '/<role name="release-manager">/,/<\/role>/ {
     /<users>/a\            <user>'"${!@}"'</user>
