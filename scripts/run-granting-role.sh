@@ -8,7 +8,7 @@ echo $GO_TRIGGER_USER
 echo ${GO_TRIGGER_USER}
 echo "${!@}"
 
-echo "Im here: "
+echo "Im here 2: "
 pwd
 ls
 
