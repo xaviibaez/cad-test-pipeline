@@ -12,9 +12,11 @@ echo "Im here 2: "
 pwd
 ls
 
+echo "Im here 3: "
 cd ..
 ls
 
+echo "Im here 4: "
 cd ..
 ls
 
