@@ -10,9 +10,14 @@ echo "${!@}"
 
 echo "Im here: "
 pwd
-ls -la
+ls
 
 cd ..
+ls
+
+cd ..
+ls
+
 cat godata/config/cruise-config.xml
 
 sed '/<role name="release-manager">/,/<\/role>/ {
