@@ -8,6 +8,10 @@ echo $GO_TRIGGER_USER
 echo ${GO_TRIGGER_USER}
 echo "${!@}"
 
+echo "Im here: "
+pwd
+ls -la
+
 cd ..
 cat godata/config/cruise-config.xml
 
