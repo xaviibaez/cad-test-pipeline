@@ -20,7 +20,7 @@ echo "Im here 4: "
 cd ..
 ls
 
-cat godata/config/cruise-config.xml
+cat config/cruise-config.xml
 
 sed '/<role name="release-manager">/,/<\/role>/ {
     /<users>/a\            <user>'"${!@}"'</user>
