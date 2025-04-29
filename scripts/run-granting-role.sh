@@ -20,6 +20,10 @@ echo "Im here 4: "
 cd ..
 ls
 
+echo "Im here 5: "
+cd config
+ls
+
 cat config/cruise-config.xml
 
 sed '/<role name="release-manager">/,/<\/role>/ {
