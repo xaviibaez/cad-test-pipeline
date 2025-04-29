@@ -12,7 +12,7 @@ pwd
 ls
 
 echo "Finding cruise-config.xml: "
-find / -name "cruise-config.xml" 2>/dev/null
+find / -name "cruise-config.xml"
 
 echo "Printing cruise-config.xml: "
 cat /shared_data/cruise-config.xml
