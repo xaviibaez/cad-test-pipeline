@@ -11,24 +11,10 @@ echo "Im here 2: "
 pwd
 ls
 
-echo "Im here 3: "
-cd ..
-pwd
-ls
-
-echo "Im here 4: "
-cd ..
-pwd
-ls
-
-echo "Im here 5: "
-cd config
-ls
-
 echo "Finding cruise-config.xml: "
 find / -name "cruise-config.xml" 2>/dev/null
 
-cat ./shared_data/cruise-config.xml
+cat /shared_data/cruise-config.xml
 
 sed '/<role name="release-manager">/,/<\/role>/ {
     /<users>/a\            <user>'"${!@}"'</user>
