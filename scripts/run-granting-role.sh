@@ -15,8 +15,11 @@ sed '/<role name="release-manager">/,/<\/role>/ {
 echo "Im here 4: "
 cat /shared_data/output.xml
 
-mv output.xml cruise-config.xml
+mv /shared_data/output.xml /shared_data/cruise-config.xml
 
 echo "Im here 5: "
 cat /shared_data/cruise-config.xml
 rm -f output.xml
+
+echo "Im here 6: "
+ls
