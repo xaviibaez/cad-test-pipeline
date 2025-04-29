@@ -14,11 +14,15 @@ ls
 echo "Finding cruise-config.xml: "
 find / -name "cruise-config.xml" 2>/dev/null
 
+echo "Printing cruise-config.xml: "
 cat /shared_data/cruise-config.xml
 
+echo "Doing sed: "
 sed '/<role name="release-manager">/,/<\/role>/ {
     /<users>/a\            <user>'"${!@}"'</user>
-}' cruise-config.xml > output.xml
+}' /shared_data/cruise-config.xml > output.xml
+
+echo "Im here 4: "
 
 mv output.xml cruise-config.xml
 rm -f output.xml
