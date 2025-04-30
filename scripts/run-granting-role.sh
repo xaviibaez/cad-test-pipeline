@@ -8,11 +8,6 @@ echo $GO_TRIGGER_USER
 echo ${GO_TRIGGER_USER}
 
 echo "Doing sed: "
-sed '/<role name="release-manager">/,/<\/role>/ {
-    /<user>'$GO_TRIGGER_USER'<\/user>/! {
-        /<users>/a\            <user>'$GO_TRIGGER_USER'</user>
-    }
-}' /shared_data/cruise-config.xml > /shared_data/output.xml
-
-mv /shared_data/output.xml /shared_data/cruise-config.xml
-rm -f /shared_data/output.xml
+sed -i '/<role name="release-manager">/,/<\/role>/ {
+    /<users>/a\            <user>'$GO_TRIGGER_USER'</user>
+}' /shared_data/cruise-config.xml
