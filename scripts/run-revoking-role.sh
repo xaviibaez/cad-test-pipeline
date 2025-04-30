@@ -6,14 +6,11 @@ set -o pipefail
 echo "Running revoking role script for: "
 echo $GO_TRIGGER_USER
 echo ${GO_TRIGGER_USER}
-echo "${!@}"
 
-cd ..
-cat godata/config/cruise-config.xml
-
+echo "Doing sed: "
 sed '/<role name="release-manager">/,/<\/role>/ {
-    /<user>'"${!@}"'<\/user>/d
-}' cruise-config.xml > output.xml
+    /<user>'$GO_TRIGGER_USER'<\/user>/d
+}' /shared_data/cruise-config.xml > /shared_data/output.xml
 
-mv output.xml cruise-config.xml
-rm -f output.xml
+mv /shared_data/output.xml /shared_data/cruise-config.xml
+rm -f /shared_data/output.xml
